@@ -20,10 +20,10 @@ document.getElementById('imcForm').addEventListener('submit', function(event) {
         classificacao = 'Abaixo do peso';
         sugestao = 'Você está abaixo do peso ideal. Considere aumentar o consumo de calorias saudáveis, incluindo proteínas e carboidratos complexos em sua dieta.';
         imcClass = 'imc-abaixo-peso';
-      } else if (imc >= 18.5 && imc <= 24.9) {
+      } else if (imc >= 18.5 && imc <= 24.99) {
         classificacao = 'Peso normal'; // Sem sugestão aqui
         imcClass = 'imc-normal';
-      } else if (imc >= 25 && imc <= 29.9) {
+      } else if (imc >= 25 && imc <= 29.99) {
         classificacao = 'Sobrepeso';
         sugestao = 'Você está com sobrepeso. Tente incorporar mais exercícios físicos em sua rotina e reduzir alimentos com alto teor de gordura e açúcar.';
         imcClass = 'imc-sobrepeso';
