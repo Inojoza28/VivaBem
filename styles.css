@@ -345,6 +345,7 @@ button:hover {
 
   .container {
     padding: 20px;
+    margin-bottom: 20px;
   }
 
   h1 {
@@ -372,6 +373,7 @@ button:hover {
 }
   .resultado .imc-card {
     padding: 12px;
+    margin-bottom: 25px;
   }
 
   .resultado .imc-card h2 {
@@ -384,6 +386,7 @@ button:hover {
 
   .resultado .suggestion {
     padding: 12px;
+    margin-bottom: 20px;
   }
 
   .resultado .suggestion h3 {
