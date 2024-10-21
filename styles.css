@@ -1,0 +1,396 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo para corpo e container */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alterado para evitar que o conteúdo centralize verticalmente */
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Header fixo */
+header {
+  display: flex;
+  align-items: center; /* Alinha a logo e o título verticalmente */
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  width: 20%;
+  padding: 20px;
+  margin-top: 20px;
+  border-bottom: 4px solid #ff6b6b;
+  border-radius: 20px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.093);
+  z-index: 1;
+}
+
+/* Estilo da logo */
+.logo {
+  width: 45px; /* Ajuste o tamanho da logo */
+  height: 45px;
+  margin-right: 10px; /* Espaço entre a logo e o título */
+  vertical-align: middle; /* Alinhamento vertical com o h2 */
+}
+
+.app-name {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  animation: fadeInDown 1s ease;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+/* Container principal */
+.container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  min-height: 300px; /* Define uma altura mínima para o container */
+  animation: fadeIn 1s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Título */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333333;
+  font-weight: 500;
+}
+
+h1 i {
+  color: #ff6b6b;
+}
+
+/* Estilo para grupos de input */
+.input-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666666;
+}
+
+label i {
+  margin-right: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  padding-left: 40px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fafafa;
+}
+
+input:focus {
+  border-color: #ff6b6b;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 107, 107, 0.5);
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+/* Botão de cálculo */
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px;
+  background-color: #ff6b6b;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button i {
+  margin-right: 8px;
+}
+
+button:hover {
+  background-color: #e55a5a;
+}
+
+/* Resultado */
+.resultado {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+  color: #333;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+  position: relative;
+  z-index: 0; /* Mantém os resultados abaixo do header e container */
+}
+
+.resultado p {
+  margin-bottom: 15px;
+}
+
+.resultado .imc-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.resultado .imc-card:hover {
+  transform: translateY(-5px);
+}
+
+.resultado .imc-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.resultado .imc-card p {
+  font-size: 18px;
+}
+
+.resultado .imc-number {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ff6b6b;
+  margin-bottom: 10px;
+}
+
+.resultado .suggestion {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.resultado .suggestion h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.resultado .suggestion p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.imc-range {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Cores para diferentes faixas de IMC */
+.imc-number.imc-normal {
+  color: #28a745; /* Verde para Peso Normal */
+}
+
+.imc-number.imc-sobrepeso {
+  color: #ffc107; /* Amarelo para Sobrepeso */
+}
+
+.imc-number.imc-obesidade {
+  color: #dc3545; /* Vermelho para Obesidade */
+}
+
+.imc-number.imc-abaixo-peso {
+  color: #17a2b8; /* Azul para Abaixo do Peso */
+}
+
+
+/* Animações */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+  header {
+    width: 90%; /* Ajuste para telas menores, como tablets */
+    padding: 15px; /* Reduzir o padding em telas menores */
+  }
+
+  .app-name{
+    font-size: 27px;
+  }
+
+  .container {
+    padding: 30px;
+    max-width: 95%;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  input {
+    padding: 10px;
+    padding-left: 36px;
+    font-size: 14px;
+  }
+  .resultado .imc-card {
+    padding: 15px;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .resultado .imc-card h2 {
+    font-size: 22px;
+  }
+
+  .resultado .imc-number {
+    font-size: 28px;
+  }
+
+  .resultado .suggestion {
+    padding: 15px;
+  }
+
+  .resultado .suggestion h3 {
+    font-size: 18px;
+  }
+
+  .resultado .suggestion p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  body{
+    min-height: 65vh;
+  }
+
+  header {
+    width: 90%; /* Ajuste para smartphones */
+    padding: 10px; /* Padding menor para melhorar o ajuste em telas pequenas */
+
+  }
+  .app-name{
+    font-size: 21px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  input {
+    padding: 8px;
+    padding-left: 36px;
+    font-size: 14px;
+  }
+
+  .resultado {
+    font-size: 16px;
+  }
+  
+  .resultado .imc-card p {
+    font-size: 16px;
+}
+  .resultado .imc-card {
+    padding: 12px;
+  }
+
+  .resultado .imc-card h2 {
+    font-size: 20px;
+  }
+
+  .resultado .imc-number {
+    font-size: 24px;
+  }
+
+  .resultado .suggestion {
+    padding: 12px;
+  }
+
+  .resultado .suggestion h3 {
+    font-size: 16px;
+  }
+
+  .resultado .suggestion p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,130 @@
+/* Botão de alternância de tema */
+.theme-toggle {
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 50%;
+    width: 30px; /* Tamanho do botão */
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 26px;
+    right: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave ao alterar tema */
+    color: #fff;
+    font-size: 16px; /* Tamanho do ícone */
+}
+
+.theme-toggle:hover {
+    background-color: #e55a5a;
+    transform: rotate(30deg); /* Efeito de rotação ao passar o mouse */
+}
+
+/* Modo Dark para o botão */
+body.dark-mode .theme-toggle {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+body.dark-mode .theme-toggle:hover {
+    background-color: #444;
+    transform: rotate(-30deg); /* Efeito de rotação ao passar o mouse */
+}
+
+/* Centralizando o ícone no botão */
+.theme-toggle i {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsividade do botão */
+@media (max-width: 768px) {
+    .theme-toggle {
+        width: 25px;  /* Ajustar o tamanho do botão para tablets */
+        height: 25px;
+        font-size: 14px;  /* Tamanho do ícone reduzido */
+        top: 22px;
+        right: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .theme-toggle {
+        width: 20px;  /* Ajustar o tamanho do botão para smartphones */
+        height: 20px;
+        font-size: 12px;  /* Tamanho do ícone ainda menor */
+        top: 19px;
+        padding: 12px;
+        right: 20px;
+    }
+}
+
+/* Modo Dark */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0; /* Texto um pouco mais suave */
+}
+body.dark-mode header {
+    background-color: #e55a5a0c;
+}
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 7px 9px rgb(255 101 101 / 40%); /* Sombra mais escura no modo dark */
+}
+
+body.dark-mode input {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555; /* Cor de borda mais suave */
+}
+
+body.dark-mode input::placeholder {
+    color: #888; /* Placeholder com contraste reduzido */
+}
+
+body.dark-mode button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+}
+
+body.dark-mode button:hover {
+    background-color: #fc6161;
+}
+
+body.dark-mode .imc-card,
+body.dark-mode .suggestion {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra mais escura para o card */
+}
+
+body.dark-mode .theme-toggle {
+    background-color: #e55a5a;
+}
+
+body.dark-mode .theme-toggle:hover {
+    background-color: #e55a5a;
+}
+
+body.dark-mode label{
+    color: #b3b2b2;
+}
+body.dark-mode .resultado .suggestion h3{
+    color: #f0f0f0;
+}
+
+body.dark-mode .resultado .suggestion p {
+    color:#c6c4c4;
+}
+/* Melhorando o visual dos títulos e textos */
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
+    color: #f0f0f0;
+}
+
+
