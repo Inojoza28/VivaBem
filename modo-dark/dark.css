@@ -10,7 +10,7 @@
     justify-content: center;
     cursor: pointer;
     position: absolute;
-    top: 26px;
+    top: 28px;
     right: 20px;
     transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave ao alterar tema */
     color: #fff;
@@ -47,17 +47,17 @@ body.dark-mode .theme-toggle:hover {
         width: 25px;  /* Ajustar o tamanho do botão para tablets */
         height: 25px;
         font-size: 14px;  /* Tamanho do ícone reduzido */
-        top: 22px;
+        top: 26px;
         right: 22px;
     }
 }
 
 @media (max-width: 480px) {
     .theme-toggle {
-        width: 20px;  /* Ajustar o tamanho do botão para smartphones */
-        height: 20px;
+        width: 25px;  /* Ajustar o tamanho do botão para smartphones */
+        height: 25px;
         font-size: 12px;  /* Tamanho do ícone ainda menor */
-        top: 19px;
+        top: 21px;
         padding: 12px;
         right: 20px;
     }
