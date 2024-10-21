@@ -35,14 +35,14 @@ header {
 
 /* Estilo da logo */
 .logo {
-  width: 45px; /* Ajuste o tamanho da logo */
-  height: 45px;
+  width: 50px; /* Ajuste o tamanho da logo */
+  height: 50px;
   margin-right: 10px; /* Espaço entre a logo e o título */
   vertical-align: middle; /* Alinhamento vertical com o h2 */
 }
 
 .app-name {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
   color: #333;
   animation: fadeInDown 1s ease;
@@ -340,7 +340,7 @@ button:hover {
 
   }
   .app-name{
-    font-size: 21px;
+    font-size: 23px;
   }
 
   .container {
