@@ -1,6 +1,6 @@
-# SaúdeFit
+# VivaBem
 
-**SaúdeFit** é uma aplicação web minimalista focada em calcular o Índice de Massa Corporal (IMC) e recomendar a quantidade diária de água necessária para cada pessoa com base no seu peso. A aplicação também possui um modo claro/escuro, garantindo uma experiência de usuário personalizável.
+**VivaBem** é uma aplicação web minimalista focada em calcular o Índice de Massa Corporal (IMC) e recomendar a quantidade diária de água necessária para cada pessoa com base no seu peso. A aplicação também possui um modo claro/escuro, garantindo uma experiência de usuário personalizável.
 
 ## Funcionalidades
 
@@ -21,3 +21,12 @@
   - Armazenamento no `localStorage`
 - **Font Awesome**: Ícones para uma experiência visual aprimorada
 
+## Contato
+
+- **LinkedIn:** [Carlos Gabriel de Inojoza Santos](https://www.linkedin.com/in/carlos-gabriel-j-de-inojoza-santos-925444286)
+- **GitHub:** [Inojoza28](https://github.com/Inojoza28)
+- **Email:** carlosginojoza@gmail.com
+
+---
+
+VivaBem © 2024 - Todos os direitos reservados.
