@@ -35,8 +35,8 @@ header {
 
 /* Estilo da logo */
 .logo {
-  width: 50px; /* Ajuste o tamanho da logo */
-  height: 50px;
+  width: 60px; /* Ajuste o tamanho da logo */
+  height: 60px;
   margin-right: 10px; /* Espaço entre a logo e o título */
   vertical-align: middle; /* Alinhamento vertical com o h2 */
 }
