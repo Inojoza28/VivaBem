@@ -371,7 +371,7 @@ button:hover {
   }
   
   .resultado .imc-card p {
-    font-size: 16px;
+    font-size: 15px;
 }
   .resultado .imc-card {
     padding: 12px;
@@ -379,11 +379,11 @@ button:hover {
   }
 
   .resultado .imc-card h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .resultado .imc-number {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .resultado .suggestion {
