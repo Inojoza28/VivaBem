@@ -47,6 +47,7 @@ header {
   color: #333;
   animation: fadeInDown 1s ease;
   text-align: center;
+  margin-top: 5px;
   display: inline-block;
   vertical-align: middle;
 }
