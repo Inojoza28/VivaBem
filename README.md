@@ -1,12 +1,13 @@
 # VivaBem
 
-**VivaBem** é uma aplicação web minimalista focada em calcular o Índice de Massa Corporal (IMC) e recomendar a quantidade diária de água necessária para cada pessoa com base no seu peso. A aplicação também possui um modo claro/escuro, garantindo uma experiência de usuário personalizável.
+**VivaBem** é uma aplicação web minimalista focada em calcular o Índice de Massa Corporal (IMC) e recomendar a quantidade diária de água necessária para cada pessoa com base no seu peso. Agora, também permite que o usuário baixe um relatório detalhado com os seus dados de saúde, incluindo uma frase de motivação personalizada.
 
 ## Funcionalidades
 
 - **Cálculo de IMC**: Insira sua altura e peso para calcular rapidamente o seu Índice de Massa Corporal (IMC).
 - **Recomendação de Consumo de Água**: A partir do peso, a aplicação recomenda a quantidade de água que você deve consumir diariamente.
-- **Modo Claro e Escuro**: Alterne entre temas claro e escuro, com a preferência salva no localStorage para garantir que o tema escolhido seja mantido ao recarregar a página.
+- **Geração de Relatório**: Após calcular o IMC, o usuário pode baixar um relatório com suas informações de saúde, como altura, peso, IMC, recomendação de água e uma frase motivacional.
+- **Modo Claro e Escuro**: Alterne entre temas claro e escuro, com a preferência salva no `localStorage`.
 - **Design Responsivo**: A interface se adapta a dispositivos móveis, garantindo uma boa experiência em qualquer tamanho de tela.
 - **Logo e Interface Minimalista**: A aplicação possui uma interface leve e intuitiva, com uma logo customizada que reflete bem-estar e vitalidade.
 
@@ -19,6 +20,7 @@
 - **JavaScript**
   - Manipulação do DOM
   - Armazenamento no `localStorage`
+  - Função para geração e download de relatório
 - **Font Awesome**: Ícones para uma experiência visual aprimorada
 
 ## Contato
