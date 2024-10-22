@@ -10,6 +10,47 @@ document.getElementById('imcForm').addEventListener('submit', function(event) {
   
       // Cálculo da quantidade de água recomendada
       const aguaRecomendada = (peso * 0.035).toFixed(2); // Convertendo para litros
+
+      // RELATÓRIO DE SAUDE
+      const frasesMotivacionais = [
+        "A jornada para o sucesso é feita de pequenos passos. Continue firme e veja o progresso acontecer!",
+        "O seu corpo é o reflexo da sua força interior. Nunca subestime o que você pode alcançar!",
+        "A cada esforço, você está mais perto dos seus objetivos. Transforme obstáculos em oportunidades!",
+        "Você já superou muitos desafios até aqui, e cada vitória conta. Continue, você está no caminho certo!",
+        "Grandes mudanças começam com pequenas decisões. Persistência é a chave para o seu sucesso!",
+        "Você é capaz de alcançar qualquer objetivo. Acredite em si mesmo e na sua capacidade de evoluir!",
+        "Toda transformação começa com um simples passo. Hoje é o dia perfeito para começar o seu!",
+        "Desafios são oportunidades disfarçadas. Encare-os com coragem e determinação!",
+        "A força não está na velocidade, mas na consistência. Continue avançando, um dia de cada vez!",
+        "A verdadeira conquista está em não desistir. Mantenha-se firme e a recompensa virá!"
+      ];      
+      
+      // Seleciona uma frase aleatória
+      const fraseMotivacional = frasesMotivacionais[Math.floor(Math.random() * frasesMotivacionais.length)];
+      
+      // Exibir botão de download
+       document.getElementById('downloadBtn').style.display = 'block';// Função para gerar e baixar o relatório
+
+       document.getElementById('downloadBtn').addEventListener('click', function() {
+         const textoRelatorio = `
+Relatório de Saúde - VivaBem
+       
+Altura: ${altura} metros
+Peso: ${peso} kg
+IMC: ${imc} (${classificacao})
+Consumo de água recomendado: ${aguaRecomendada} litros por dia
+${sugestao ? 'Sugestão: ' + sugestao : ''}
+           
+Frase de motivação: ${fraseMotivacional}
+         `;
+       
+         const blob = new Blob([textoRelatorio], { type: 'text/plain' });
+         const link = document.createElement('a');
+         link.href = URL.createObjectURL(blob);
+         link.download = 'relatorio-saude-VivaBem.txt';
+         link.click();
+       });
+    // FIM DO RELATÓRIO DE SAUDE
   
       // Definindo a classificação do IMC e a classe CSS correspondente
       let classificacao = '';
