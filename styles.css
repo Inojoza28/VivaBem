@@ -200,7 +200,7 @@
   }
   
   .resultado .suggestion h3 {
-    font-size: 20px;
+    font-size: 18px;
     color: #333;
     margin-bottom: 10px;
   }
@@ -233,35 +233,96 @@
     color: #17a2b8; /* Azul para Abaixo do Peso */
   }
 
-    /* Cores baseadas no IMC */
-    .imc-abaixo-peso {
-        color: #17a2b8; /* Azul para abaixo do peso */
-      }
-      
-      .imc-normal {
-        color: #28a745; /* Verde para peso normal */
-      }
-      
-      .imc-sobrepeso {
-        color: #ffc107; /* Amarelo para sobrepeso */
-      }
-      
-      .imc-obesidade {
-        color: #dc3545; /* Vermelho para obesidade */
-      }
-      
-      /* Animação */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(-20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      
+   /* Estilização do container de recomendação de água */
+.water-recommendation {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
+  
+  .water-recommendation h3 {
+    font-size: 20px;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .water-bar {
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  
+  .water-bar-fill {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+  }
+
+  /* Container para os copos */
+.copos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  /* Estilo dos copos */
+  .copo {
+    width: 40px;
+    height: 60px;
+    background-color: #007bff;
+    border-radius: 5px;
+    margin: 5px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Detalhe no topo do copo */
+  .copo:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #e0f7fa;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  
+  /* Cores baseadas no IMC */
+  .imc-abaixo-peso {
+    color: #17a2b8; /* Azul para abaixo do peso */
+  }
+  
+  .imc-normal {
+    color: #28a745; /* Verde para peso normal */
+  }
+  
+  .imc-sobrepeso {
+    color: #ffc107; /* Amarelo para sobrepeso */
+  }
+  
+  .imc-obesidade {
+    color: #dc3545; /* Vermelho para obesidade */
+  }
+  
+  /* Animação */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
   
   /* Animações */
   @keyframes fadeInUp {
@@ -397,6 +458,15 @@
       padding-left: 36px;
       font-size: 14px;
     }
+
+    .water-recommendation h3{
+        font-size: 18px;
+    }
+
+    .copo{
+        width: 25px;
+        height: 40px;
+    }
   
     .resultado {
       font-size: 16px;
@@ -408,6 +478,7 @@
     .resultado .imc-card {
       padding: 12px;
       margin-bottom: 25px;
+      width: 100%;
     }
   
     .resultado .imc-card h2 {

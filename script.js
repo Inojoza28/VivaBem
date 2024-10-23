@@ -11,6 +11,11 @@ document.getElementById('imcForm').addEventListener('submit', function(event) {
       // Cálculo da quantidade de água recomendada
       const aguaRecomendada = (peso * 0.035).toFixed(2); // Convertendo para litros
 
+
+      // Calculando o número de copos (cada copo de 250ml = 0.25 litros)
+      const numeroCopos = Math.ceil(aguaRecomendada / 0.25); // Arredondando para cima
+
+
       // RELATÓRIO DE SAUDE
       const frasesMotivacionais = [
         "A jornada para o sucesso é feita de pequenos passos. Continue firme e veja o progresso acontecer!",
@@ -78,13 +83,29 @@ Frase de motivação: ${fraseMotivacional}
         icon = '<i class="fas fa-times-circle" style="color: #dc3545;"></i>'; // Ícone de perigo
       }
   
-      // Exibição dos resultados com ícones, animações e cores
+
+
+      // Gerando os copos visualmente
+      let coposHtml = '';
+      for (let i = 0; i < numeroCopos; i++) {
+        coposHtml += '<div class="copo"></div>'; // Adiciona copos
+      }
+
+      // Exibição dos resultados com a quantidade de copos
       document.getElementById('resultado').innerHTML = `
         <div class="imc-card">
           <h2>Seu IMC é:</h2>
           <div class="imc-number ${imcClass}">${imc}</div>
           <p class="imc-range">${icon} ${classificacao}</p>
-          <p>Você deve beber cerca de <strong>${aguaRecomendada} litros</strong> de água por dia.</p>
+          <div class="water-recommendation">
+            <h3>Consumo de Água:</h3>
+            <p>Você deve beber cerca de <strong>${aguaRecomendada} litros</strong> de água por dia.</p>
+            <div class="copos-container">
+              ${coposHtml}
+            </div>
+            <br>
+            <p>Isso equivale a aproximadamente <strong>${numeroCopos} copos</strong> de 250ml.</p>
+          </div>
         </div>
         ${sugestao ? `
         <div class="suggestion">
