@@ -57,7 +57,7 @@
   .container {
     background-color: #ffffff;
     padding: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     max-width: 450px;
@@ -440,7 +440,7 @@
   
     .container {
       padding: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
   
     h1 {

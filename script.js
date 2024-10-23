@@ -84,7 +84,6 @@ Frase de motivação: ${fraseMotivacional}
       }
   
 
-
       // Gerando os copos visualmente
       let coposHtml = '';
       for (let i = 0; i < numeroCopos; i++) {
