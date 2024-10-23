@@ -61,35 +61,38 @@ Frase de motivação: ${fraseMotivacional}
         classificacao = 'Abaixo do peso';
         sugestao = 'Você está abaixo do peso ideal. Considere aumentar o consumo de calorias saudáveis, incluindo proteínas e carboidratos complexos em sua dieta.';
         imcClass = 'imc-abaixo-peso';
+        icon = '<i class="fas fa-arrow-down" style="color: #17a2b8;"></i>'; // Ícone de seta para baixo
       } else if (imc >= 18.5 && imc <= 24.99) {
         classificacao = 'Peso normal'; // Sem sugestão aqui
         imcClass = 'imc-normal';
+        icon = '<i class="fas fa-check-circle" style="color: #28a745;"></i>'; // Ícone de "check"
       } else if (imc >= 25 && imc <= 29.99) {
         classificacao = 'Sobrepeso';
         sugestao = 'Você está com sobrepeso. Tente incorporar mais exercícios físicos em sua rotina e reduzir alimentos com alto teor de gordura e açúcar.';
         imcClass = 'imc-sobrepeso';
+        icon = '<i class="fas fa-exclamation-circle" style="color: #ffc107;"></i>'; // Ícone de alerta
       } else {
         classificacao = 'Obesidade';
         sugestao = 'Você está com obesidade. Procure orientação médica e considere mudanças significativas em sua dieta e estilo de vida.';
         imcClass = 'imc-obesidade';
+        icon = '<i class="fas fa-times-circle" style="color: #dc3545;"></i>'; // Ícone de perigo
       }
   
-      // Exibição dos resultados com um visual mais atraente
+      // Exibição dos resultados com ícones, animações e cores
       document.getElementById('resultado').innerHTML = `
         <div class="imc-card">
           <h2>Seu IMC é:</h2>
           <div class="imc-number ${imcClass}">${imc}</div>
-          <p class="imc-range">${classificacao}</p>
+          <p class="imc-range">${icon} ${classificacao}</p>
           <p>Você deve beber cerca de <strong>${aguaRecomendada} litros</strong> de água por dia.</p>
         </div>
         ${sugestao ? `
         <div class="suggestion">
-          <h3>Sugestão:</h3>
+          <h3><h3><i class="fas fa-info-circle"></i> Sugestão:</h3>
           <p>${sugestao}</p>
         </div>` : ''}
       `;
     } else {
       document.getElementById('resultado').innerHTML = '<p>Por favor, insira valores válidos.</p>';
     }
-  });
-  
+});
