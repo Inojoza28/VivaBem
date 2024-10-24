@@ -11,6 +11,8 @@ document.getElementById('imcForm').addEventListener('submit', function(event) {
       // Cálculo da quantidade de água recomendada
       const aguaRecomendada = (peso * 0.035).toFixed(2); // Convertendo para litros
 
+      const nomeInput = document.getElementById('nome'); // Captura o campo de nome
+
 
       // Calculando o número de copos (cada copo de 250ml = 0.25 litros)
       const numeroCopos = Math.ceil(aguaRecomendada / 0.25); // Arredondando para cima
@@ -37,9 +39,17 @@ document.getElementById('imcForm').addEventListener('submit', function(event) {
        document.getElementById('downloadBtn').style.display = 'block';// Função para gerar e baixar o relatório
 
        document.getElementById('downloadBtn').addEventListener('click', function() {
+        const nome = nomeInput.value.trim(); // Captura o valor do nome e remove espaços extras
+      
+        // Verificação do nome antes de permitir o download
+        if (!nome) {
+          alert('Por favor, preencha seu nome antes de baixar o relatório.');
+          return;
+        }
          const textoRelatorio = `
 Relatório de Saúde - VivaBem
        
+Nome: ${nome}
 Altura: ${altura} metros
 Peso: ${peso} kg
 IMC: ${imc} (${classificacao})
